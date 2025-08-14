@@ -23,23 +23,19 @@ System Pipeline
 
         “Build a web application for online food ordering and payment processing.”
 
-3. Project Outline Generation (LLM #2)
+3.## Prototype Package
 
-    AI generates a high-level outline of all major features, modules, and project phases required for the goal.
+The `prompt_teacher` package provides a modular foundation for the system. Key components include:
 
-    Output is structured and ready for breakdown.
+- **Config models**: centralised application settings.
+- **LLM client**: HTTP interface to a GPT4ALL or OpenAI-style server with connectivity health check.
+- **Memory store**: debate loop and storage stubs for FAISS + PostgreSQL.
+- **Task model**: structured task representation and tracking.
+- **Agent executor**: ingests ideas, plans projects, and executes steps while persisting context.
+- **Tool router**: `tool_call` function enabling hot-swappable external tools.
 
-    Example outline:
+These modules are starting points and contain TODO markers where further implementation is required.
 
-        User Registration & Login
-
-        Restaurant Menu Browsing
-
-        Order Cart Management
-
-        Payment Integration
-
-        Order Tracking
 
 4. Stepwise Prompt Breakdown
 
